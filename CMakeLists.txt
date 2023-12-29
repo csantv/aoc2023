@@ -15,14 +15,14 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS OFF
     EXPORT_COMPILE_COMMANDS ON
 )
-set(PROJECT_WARNINGS_CXX
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Werror)
+target_compile_options(${PROJECT_NAME} PRIVATE -fdiagnostics-color=always)
 target_compile_options(${PROJECT_NAME} PRIVATE
-    $<$<CONFIG:Debug>:
-        $<$<COMPILE_LANGUAGE:CXX>:${PROJECT_WARNINGS_CXX}>
+    $<$<CONFIG:Debug>:$<$<COMPILE_LANGUAGE:CXX>:
+            -Wall
+            -Wextra
+            -Wpedantic
+            -Werror
+        >
     >
 )
 target_include_directories(${PROJECT_NAME} PRIVATE
