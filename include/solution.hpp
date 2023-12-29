@@ -18,6 +18,8 @@ public:
     void day1p1();
     void day1p2();
 
+    void day2p1();
+
 private:
     std::string input;
 };
