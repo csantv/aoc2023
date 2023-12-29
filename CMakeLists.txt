@@ -23,8 +23,11 @@ target_compile_options(${PROJECT_NAME} PRIVATE
         $<$<COMPILE_LANGUAGE:CXX>:${PROJECT_WARNINGS_CXX}>
     >
 )
-
-target_sources(${PROJECT_NAME} PRIVATE main.cpp)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_sources(${PROJECT_NAME} PRIVATE
+    src/main.cpp
+    src/day1.cpp
+)
 target_link_libraries(
     ${PROJECT_NAME} PRIVATE
     TBB::tbb
