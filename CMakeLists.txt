@@ -11,6 +11,7 @@ add_executable(${PROJECT_NAME})
 
 find_package(TBB REQUIRED)
 find_package(Threads REQUIRED)
+find_package(Microsoft.GSL CONFIG REQUIRED)
 
 set(PROJECT_WARNINGS_CXX
     -Wall
@@ -32,4 +33,5 @@ target_link_libraries(
     ${PROJECT_NAME} PRIVATE
     TBB::tbb
     Threads::Threads
+    Microsoft.GSL::GSL
 )

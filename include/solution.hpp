@@ -14,7 +14,9 @@ public:
         buffer << ifs.rdbuf();
         input = buffer.str();
     }
+
     void day1p1();
+    void day1p2();
 
 private:
     std::string input;

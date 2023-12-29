@@ -6,6 +6,6 @@ auto main(int argc, char *argv[]) -> int
         return 1;
     }
     Solution sol (argv[1]);
-    sol.day1p1();
+    sol.day1p2();
     return 0;
 }
