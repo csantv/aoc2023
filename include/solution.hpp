@@ -19,6 +19,9 @@ public:
     void day1p2();
 
     void day2p1();
+    void day2p2();
+
+    void day3p1();
 
 private:
     std::string input;

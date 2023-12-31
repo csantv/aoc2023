@@ -33,6 +33,7 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/main.cpp
     src/day1.cpp
     src/day2.cpp
+    src/day3.cpp
 )
 target_link_libraries(
     ${PROJECT_NAME} PRIVATE
